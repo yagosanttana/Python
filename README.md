@@ -1,3 +1,3 @@
-## Prática de estudos na linguagem Python
+## Repositório criado para prática de estudos na linguagem Python
 
-Sistema Bancário Simples
+- Sistema Bancário Simples
