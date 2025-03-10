@@ -49,7 +49,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
 
     return saldo, extrato
 
-def exibir_extrato(saldo, /, *, extato):
+def exibir_extrato(saldo, /, *, extrato):
     print("\n=============== EXTRATO ===============")
     print("Não foram realizadas movimentações." if not extrato else extrato)
     print(f"\nSaldo:\t\tR${saldo:.2f}")
@@ -106,11 +106,10 @@ def main():
     numero_saques = 0
     usuarios = []
     contas = []
-    
+
 
     while True:
-
-        opcao = input(menu)
+        opcao = menu()
 
         if opcao == "1":
             valor = float(input("Informe o valor do depósito:"))
@@ -118,7 +117,7 @@ def main():
             saldo, extrato = depositar(saldo, valor, extrato)
         
         elif opcao == "2":
-            valor = float(input("Informe o valor do saque: "))
+            valor = float(input("Informe o valor do saque:"))
 
             saldo, extrato = sacar(
                 saldo = saldo,
